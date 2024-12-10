@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Action, Column } from '../types/types';
 import ColumnComponent from './Column';
 import { undoAction, redoAction } from '../utils/undoRedo';
+import { BiRedo, BiUndo } from 'react-icons/bi';
 
 const KanbanBoard: React.FC = () => {
      const [columns, setColumns] = useState<Column[]>([
@@ -118,10 +119,10 @@ const KanbanBoard: React.FC = () => {
                     </div>
                     <div className='flex flex-row gap-2'>
                          <button onClick={() => undoAction(undoStack, setUndoStack, setRedoStack, setColumns)} className="bg-gray-500 text-white p-2 rounded">
-                              Undo
+                              <BiUndo />
                          </button>
                          <button onClick={() => redoAction(redoStack, setRedoStack, setUndoStack, setColumns)} className="bg-gray-500 text-white p-2 rounded">
-                              Redo
+                              <BiRedo />
                          </button>
                     </div>
                </div>
