@@ -1,0 +1,11 @@
+.draggable {
+  transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.draggable.dragging {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.task {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
